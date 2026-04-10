@@ -23,7 +23,7 @@ EVENTS = {
             "Teams must present a working demo at the end.",
             "Decision of judges is final.",
         ],
-        "google_form": "https://forms.gle/your-sparkathon-link"
+        "google_form": "https://forms.gle/huQadNmQtjD4Xb5m8"
     },
     "escape-room": {
         "name": "Escape Room",
@@ -42,7 +42,7 @@ EVENTS = {
             "Physical damage to props leads to disqualification.",
             "Teams must wait outside until called.",
         ],
-        "google_form": "https://forms.gle/your-escape-link"
+        "google_form": "https://forms.gle/SnMUzey9pE4KMHycA"
     },
     "big-bunty-hunt": {
         "name": "Big Bunty Hunt",
@@ -61,7 +61,7 @@ EVENTS = {
             "The first team to complete all checkpoints wins.",
             "Coordinators decision is final in case of disputes.",
         ],
-        "google_form": "https://forms.gle/your-bunty-link"
+        "google_form": "https://forms.gle/amCMtMJJjRsVQgUMA"
     }
 }
 
