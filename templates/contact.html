@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}TechSpark – Contact Us{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <h1 class="page-title">CONTACT US</h1>
+  <p class="page-sub">We'd love to hear from you</p>
+</section>
+
+<section class="section">
+  <div class="contact-main-grid">
+
+    <!-- Coordinators → goes to separate page -->
+    <div class="contact-rect" onclick="location.href='/coordinators'">
+      <div class="contact-rect-icon">👥</div>
+      <div class="contact-rect-text">
+        <h3>Our Coordinators</h3>
+        <p>Faculty, President, Vice President & Members</p>
+      </div>
+      <span class="contact-rect-arrow">→</span>
+    </div>
+
+    <!-- Social Media — vertical list -->
+    <div class="social-links-vertical" style="margin-top:2rem;">
+
+      <a href="mailto:techspark@navkis.edu.in" class="social-link-vertical">
+        <span class="social-link-icon">📧</span>
+        <div class="social-link-info">
+          <span class="social-link-label">Email</span>
+          <span class="social-link-value">techspark@navkis.edu.in</span>
+        </div>
+      </a>
+
+      <a href="https://instagram.com/YOUR_INSTAGRAM_ID"
+         target="_blank" class="social-link-vertical">
+        <span class="social-link-icon">📸</span>
+        <div class="social-link-info">
+          <span class="social-link-label">Instagram</span>
+          <span class="social-link-value">@YOUR_INSTAGRAM_ID</span>
+        </div>
+      </a>
+
+      <a href="https://facebook.com/YOUR_FACEBOOK_ID"
+         target="_blank" class="social-link-vertical">
+        <span class="social-link-icon">📘</span>
+        <div class="social-link-info">
+          <span class="social-link-label">Facebook</span>
+          <span class="social-link-value">YOUR_FACEBOOK_ID</span>
+        </div>
+      </a>
+
+      <a href="https://youtube.com/@YOUR_YOUTUBE_ID"
+         target="_blank" class="social-link-vertical">
+        <span class="social-link-icon">▶️</span>
+        <div class="social-link-info">
+          <span class="social-link-label">YouTube</span>
+          <span class="social-link-value">@YOUR_YOUTUBE_ID</span>
+        </div>
+      </a>
+
+      <a href="https://www.threads.net/@YOUR_THREADS_ID"
+         target="_blank" class="social-link-vertical">
+        <span class="social-link-icon">🧵</span>
+        <div class="social-link-info">
+          <span class="social-link-label">Threads</span>
+          <span class="social-link-value">@YOUR_THREADS_ID</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

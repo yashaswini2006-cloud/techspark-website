@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}TechSpark – Inspire Innovate Integrate{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TechSpark" class="nav-logo-img"/>
+      <span>TECH<span class="spark">S</span>PARK</span>
+    </a>
+   <ul class="nav-links">
+  <li><a href="/">Home</a></li>
+  <li><a href="/events">Events</a></li>
+  <li><a href="/blackout">Blackout Horizon 2.0</a></li>
+  <li><a href="/rulebook">Rule Book</a></li>
+  <li><a href="/contact">Contact Us</a></li>
+</ul>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TechSpark" class="footer-logo"/>
+    <p class="footer-name">TECH<span class="spark">S</span>PARK</p>
+    <p class="footer-sub">Inspire · Innovate · Integrate</p>
+    <p class="footer-college">An initiative of Navkis College of Engineering, Hassan</p>
+    <p class="footer-copy">&copy; 2026 TechSpark Club. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

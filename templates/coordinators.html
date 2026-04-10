@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}Our Coordinators – TechSpark{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <h1 class="page-title">OUR COORDINATORS</h1>
+  <p class="page-sub">The team behind TechSpark</p>
+</section>
+
+<section class="section">
+
+  <!-- FACULTY COORDINATORS -->
+  <h2 class="coord-section-heading">🎓 Faculty Coordinators</h2>
+  <div class="coord-expand-grid">
+    {% for t in teachers %}
+    <div class="coord-expand-card">
+      <div class="coord-expand-photo-wrap">
+        <img src="{{ url_for('static', filename=t.photo) }}"
+             alt="{{ t.name }}" class="coord-expand-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="coord-expand-fallback">👤</div>
+      </div>
+      <div class="coord-expand-info">
+        <h4>{{ t.name }}</h4>
+        <span class="coord-role">{{ t.role }}</span>
+        <p class="coord-branch">{{ t.branch }}</p>
+        <a href="tel:{{ t.phone }}" class="coord-contact-link">📞 {{ t.phone }}</a>
+        <a href="mailto:{{ t.email }}" class="coord-contact-link">📧 {{ t.email }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- PRESIDENT -->
+  <h2 class="coord-section-heading" style="margin-top:2.5rem;">👑 President</h2>
+  <div class="coord-expand-grid">
+    {% for s in president %}
+    <div class="coord-expand-card">
+      <div class="coord-expand-photo-wrap">
+        <img src="{{ url_for('static', filename=s.photo) }}"
+             alt="{{ s.name }}" class="coord-expand-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="coord-expand-fallback">👤</div>
+      </div>
+      <div class="coord-expand-info">
+        <h4>{{ s.name }}</h4>
+        <span class="coord-role">{{ s.role }}</span>
+        <p class="coord-branch">{{ s.branch }}</p>
+        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
+        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- VICE PRESIDENT -->
+  <h2 class="coord-section-heading" style="margin-top:2.5rem;">🥈 Vice President</h2>
+  <div class="coord-expand-grid">
+    {% for s in vice_president %}
+    <div class="coord-expand-card">
+      <div class="coord-expand-photo-wrap">
+        <img src="{{ url_for('static', filename=s.photo) }}"
+             alt="{{ s.name }}" class="coord-expand-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="coord-expand-fallback">👤</div>
+      </div>
+      <div class="coord-expand-info">
+        <h4>{{ s.name }}</h4>
+        <span class="coord-role">{{ s.role }}</span>
+        <p class="coord-branch">{{ s.branch }}</p>
+        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
+        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- TECHNICAL COORDINATORS -->
+  <h2 class="coord-section-heading" style="margin-top:2.5rem;">⚙️ Technical Coordinators</h2>
+  <div class="coord-expand-grid">
+    {% for s in tech_coords %}
+    <div class="coord-expand-card">
+      <div class="coord-expand-photo-wrap">
+        <img src="{{ url_for('static', filename=s.photo) }}"
+             alt="{{ s.name }}" class="coord-expand-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="coord-expand-fallback">👤</div>
+      </div>
+      <div class="coord-expand-info">
+        <h4>{{ s.name }}</h4>
+        <span class="coord-role">{{ s.role }}</span>
+        <p class="coord-branch">{{ s.branch }}</p>
+        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
+        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- ALL MEMBERS -->
+  <h2 class="coord-section-heading" style="margin-top:2.5rem;">⚡ Club Members</h2>
+  <div class="coord-expand-grid">
+    {% for s in members %}
+    <div class="coord-expand-card">
+      <div class="coord-expand-photo-wrap">
+        <img src="{{ url_for('static', filename=s.photo) }}"
+             alt="{{ s.name }}" class="coord-expand-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="coord-expand-fallback">👤</div>
+      </div>
+      <div class="coord-expand-info">
+        <h4>{{ s.name }}</h4>
+        <span class="coord-role">{{ s.role }}</span>
+        <p class="coord-branch">{{ s.branch }}</p>
+        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
+        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>
+{% endblock %}

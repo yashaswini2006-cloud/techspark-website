@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}{{ event.name }} – TechSpark{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <h1 class="page-title">{{ event.name }}</h1>
+  <p class="page-sub">{{ event.short }}</p>
+</section>
+
+<div class="detail-wrapper">
+
+  <!-- Poster -->
+  <section class="section poster-section">
+    <div class="poster-box">
+      <img src="{{ url_for('static', filename=event.poster) }}"
+           alt="{{ event.name }} Poster"
+           class="event-poster"
+           onerror="this.style.display='none'; document.getElementById('poster-fallback').style.display='flex'"/>
+      <div id="poster-fallback" class="poster-fallback">
+        <span>⚡</span>
+        <p>{{ event.name }}</p>
+        <small>Add poster image to static/images/</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info grid -->
+  <section class="section">
+    <h2 class="section-title">Event Details</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="info-icon">📅</span>
+        <div>
+          <p class="info-label">Date</p>
+          <p class="info-value">{{ event.date }}</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div>
+          <p class="info-label">Venue</p>
+          <p class="info-value">{{ event.venue }}</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🏆</span>
+        <div>
+          <p class="info-label">Prize Pool</p>
+          <p class="info-value">{{ event.prize_pool }}</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💡</span>
+        <div>
+          <p class="info-label">Theme</p>
+          <p class="info-value">{{ event.theme }}</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <div>
+          <p class="info-label">Registration Fee</p>
+          <p class="info-value">{{ event.fee }}</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">👥</span>
+        <div>
+          <p class="info-label">Team Size</p>
+          <p class="info-value">{{ event.team_size }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Download Button -->
+  <section class="section" style="text-align:center;">
+    <a href="/events/{{ event_id }}/download" class="btn-download">
+      ⬇ Download Rule Book (PDF)
+    </a>
+  </section>
+
+  <!-- Rules -->
+  <section class="section rules-section">
+    <h2 class="section-title">Rules & Guidelines</h2>
+    <ol class="rules-list">
+      {% for rule in event.rules %}
+      <li>{{ rule }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- Registration -->
+  <section class="section register-section">
+    <h2 class="section-title">Register Now</h2>
+    <p class="register-note">
+      Click the button below to open the official registration form.
+      Make sure you've read the rules before registering.
+    </p>
+    <a href="{{ event.google_form }}" target="_blank" class="btn-register">
+      📝 Register for {{ event.name }}
+    </a>
+    <p class="register-small">You will be redirected to a Google Form.</p>
+  </section>
+
+</div><!-- end .detail-wrapper -->
+
+<div class="back-link">
+  <a href="/events/blackout">← Back to Blackout Horizon 2.0</a>
+</div>
+
+{% endblock %}

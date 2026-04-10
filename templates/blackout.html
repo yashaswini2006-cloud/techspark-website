@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Blackout Horizon 2.0 – TechSpark{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <h1 class="page-title">⚡ BLACKOUT HORIZON 2.0</h1>
+  <p class="page-sub">Three Events. One Massive Experience.</p>
+</section>
+
+<section class="section">
+  <div class="event-cards-row">
+
+    {% for event_id, event in event_list %}
+    <div class="event-poster-card" onclick="location.href='/events/{{ event_id }}'">
+
+      <!-- POSTER IMAGE -->
+      <div class="event-poster-wrap">
+        <img src="{{ url_for('static', filename=event.poster) }}"
+             alt="{{ event.name }} Poster"
+             class="event-poster-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="event-poster-fallback">🖼️</div>
+      </div>
+
+      <!-- INFO BELOW POSTER -->
+      <div class="event-poster-info">
+        <h2 class="event-poster-name">{{ event.name }}</h2>
+        <p class="event-poster-meta">📅 {{ event.date }}</p>
+        <p class="event-poster-meta">👥 {{ event.team_size }}</p>
+        <span class="btn-primary" style="margin-top:1rem;display:inline-block;">
+          View Details →
+        </span>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+{% endblock %}
