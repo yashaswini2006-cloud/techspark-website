@@ -79,7 +79,7 @@ EVENTS = {
             "Small intentional errors are embedded in the code. Participants must identify, fix the errors, and submit the corrected code to earn points.",
             "Points are awarded for each valid bug fix. The team with the highest total points at the end wins.",
             "A fun activity round will be conducted in the middle of the event. Points are also awarded for performance in the fun activity round.",
-             "A participation certificate will be awarded to every participant.",
+            "A participation certificate will be awarded to every participant.",
             "Participants must identify and report bugs ethically. No destructive or malicious actions are allowed.",
             "Sharing findings or solutions with other teams leads to immediate disqualification.",
            
@@ -370,4 +370,5 @@ def coordinators():
         members=CLUB_MEMBERS)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
