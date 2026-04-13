@@ -1,123 +1,546 @@
 {% extends "base.html" %}
-{% block title %}Our Coordinators – TechSpark{% endblock %}
+{% block title %}Our Team – TechSpark{% endblock %}
 {% block content %}
 
 <section class="page-hero">
-  <h1 class="page-title">OUR COORDINATORS</h1>
-  <p class="page-sub">The team behind TechSpark</p>
+  <h1 class="page-title">OUR TEAM</h1>
+  <p class="page-sub">The people who make TechSpark happen</p>
 </section>
 
-<section class="section">
+<div class="team-wrapper">
 
-  <!-- FACULTY COORDINATORS -->
-  <h2 class="coord-section-heading">🎓 Faculty Coordinators</h2>
-  <div class="coord-expand-grid">
-    {% for t in teachers %}
-    <div class="coord-expand-card">
-      <div class="coord-expand-photo-wrap">
-        <img src="{{ url_for('static', filename=t.photo) }}"
-             alt="{{ t.name }}" class="coord-expand-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="coord-expand-fallback">👤</div>
-      </div>
-      <div class="coord-expand-info">
-        <h4>{{ t.name }}</h4>
-        <span class="coord-role">{{ t.role }}</span>
-        <p class="coord-branch">{{ t.branch }}</p>
-        <a href="tel:{{ t.phone }}" class="coord-contact-link">📞 {{ t.phone }}</a>
-        <a href="mailto:{{ t.email }}" class="coord-contact-link">📧 {{ t.email }}</a>
+  <!-- ══════════════════════════════════════
+       CONVENER (add your faculty convener here)
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">🎓</span>
+      <h2>Faculty Convener</h2>
+    </div>
+    <div class="team-grid team-grid-center">
+      <div class="member-card member-card-large">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/convener.jpg') }}"
+               alt="Faculty Convener"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Prof. [Convener Name]</h3>
+          <span class="member-badge badge-faculty">Faculty Convener</span>
+          <p class="member-branch">Department of [Branch]</p>
+          <a href="tel:+910000000000" class="member-contact">📞 +91 00000 00000</a>
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
+  </section>
 
-  <!-- PRESIDENT -->
-  <h2 class="coord-section-heading" style="margin-top:2.5rem;">👑 President</h2>
-  <div class="coord-expand-grid">
-    {% for s in president %}
-    <div class="coord-expand-card">
-      <div class="coord-expand-photo-wrap">
-        <img src="{{ url_for('static', filename=s.photo) }}"
-             alt="{{ s.name }}" class="coord-expand-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="coord-expand-fallback">👤</div>
-      </div>
-      <div class="coord-expand-info">
-        <h4>{{ s.name }}</h4>
-        <span class="coord-role">{{ s.role }}</span>
-        <p class="coord-branch">{{ s.branch }}</p>
-        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
-        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       PRESIDENT
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">👑</span>
+      <h2>President</h2>
+    </div>
+    <div class="team-grid team-grid-center">
+      <div class="member-card member-card-large">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/neha_kg.jpg') }}"
+               alt="Neha K G"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Neha K G</h3>
+          <span class="member-badge badge-president">President</span>
+          <p class="member-branch">Electronics & Communication · 6th Sem</p>
+          <a href="tel:+919019196191" class="member-contact">📞 +91 90191 96191</a>
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
+  </section>
 
-  <!-- VICE PRESIDENT -->
-  <h2 class="coord-section-heading" style="margin-top:2.5rem;">🥈 Vice President</h2>
-  <div class="coord-expand-grid">
-    {% for s in vice_president %}
-    <div class="coord-expand-card">
-      <div class="coord-expand-photo-wrap">
-        <img src="{{ url_for('static', filename=s.photo) }}"
-             alt="{{ s.name }}" class="coord-expand-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="coord-expand-fallback">👤</div>
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       VICE PRESIDENT  ← only Hajira (corrected)
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">⭐</span>
+      <h2>Vice President</h2>
+    </div>
+    <div class="team-grid team-grid-center">
+
+      <div class="member-card member-card-large">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/hajira_tazain.jpg') }}"
+               alt="Hajira Tazain"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Hajira Tazain</h3>
+          <span class="member-badge badge-vp">Vice President</span>
+          <p class="member-branch">Computer Science · Technical Committee</p>
+          <a href="tel:+917338461901" class="member-contact">📞 +91 73384 61901</a>
+        </div>
       </div>
-      <div class="coord-expand-info">
-        <h4>{{ s.name }}</h4>
-        <span class="coord-role">{{ s.role }}</span>
-        <p class="coord-branch">{{ s.branch }}</p>
-        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
-        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       SECRETARY
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">📝</span>
+      <h2>Secretary</h2>
+    </div>
+    <div class="team-grid team-grid-center">
+      <div class="member-card member-card-large">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/chandan_p.jpg') }}"
+               alt="Chandan P"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Chandan P</h3>
+          <span class="member-badge badge-secretary">Secretary</span>
+          <p class="member-branch">Computer Science · 6th Sem</p>
+          <a href="tel:+918792039311" class="member-contact">📞 +91 87920 39311</a>
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
+  </section>
 
-  <!-- TECHNICAL COORDINATORS -->
-  <h2 class="coord-section-heading" style="margin-top:2.5rem;">⚙️ Technical Coordinators</h2>
-  <div class="coord-expand-grid">
-    {% for s in tech_coords %}
-    <div class="coord-expand-card">
-      <div class="coord-expand-photo-wrap">
-        <img src="{{ url_for('static', filename=s.photo) }}"
-             alt="{{ s.name }}" class="coord-expand-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="coord-expand-fallback">👤</div>
-      </div>
-      <div class="coord-expand-info">
-        <h4>{{ s.name }}</h4>
-        <span class="coord-role">{{ s.role }}</span>
-        <p class="coord-branch">{{ s.branch }}</p>
-        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
-        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       VICE SECRETARY  ← Vijayaraghavendra (corrected from VP)
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">📋</span>
+      <h2>Vice Secretary</h2>
+    </div>
+    <div class="team-grid team-grid-center">
+      <div class="member-card member-card-large">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/vijayaraghavendra_m.jpg') }}"
+               alt="Vijayaraghavendra M"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Vijayaraghavendra M</h3>
+          <span class="member-badge badge-secretary">Vice Secretary</span>
+          <p class="member-branch">Computer Science · 4th Sem</p>
+          <a href="tel:+919164775569" class="member-contact">📞 +91 91647 75569</a>
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
+  </section>
 
-  <!-- ALL MEMBERS -->
-  <h2 class="coord-section-heading" style="margin-top:2.5rem;">⚡ Club Members</h2>
-  <div class="coord-expand-grid">
-    {% for s in members %}
-    <div class="coord-expand-card">
-      <div class="coord-expand-photo-wrap">
-        <img src="{{ url_for('static', filename=s.photo) }}"
-             alt="{{ s.name }}" class="coord-expand-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="coord-expand-fallback">👤</div>
-      </div>
-      <div class="coord-expand-info">
-        <h4>{{ s.name }}</h4>
-        <span class="coord-role">{{ s.role }}</span>
-        <p class="coord-branch">{{ s.branch }}</p>
-        <p class="coord-branch">{{ s.sem }} | {{ s.year }}</p>
-        <a href="tel:{{ s.phone }}" class="coord-contact-link">📞 {{ s.phone }}</a>
-      </div>
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       TREASURERS
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header">
+      <span class="team-section-icon">💰</span>
+      <h2>Treasurers</h2>
     </div>
-    {% endfor %}
+    <div class="team-grid team-grid-two">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/moulya_gowda.jpg') }}"
+               alt="Moulya S Gowda"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Moulya S Gowda</h3>
+          <span class="member-badge badge-treasurer">Treasurer</span>
+          <p class="member-branch">Computer Science · Database Committee</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/chalana_suresh.jpg') }}"
+               alt="Chalana Suresh"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Chalana Suresh</h3>
+          <span class="member-badge badge-treasurer">Treasurer</span>
+          <p class="member-branch">Computer Science · Social Media Committee</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 1. MONITORING CELL
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">🔍</span>
+      <h2>Monitoring Cell</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/raksha_kr.jpg') }}"
+               alt="Raksha K R"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Raksha K R</h3>
+          <span class="member-badge badge-member">Monitoring Cell</span>
+          <p class="member-branch">Computer Science</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 2. INTERNAL AFFAIRS
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">🏛️</span>
+      <h2>Internal Affairs</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/mohan_d.jpg') }}"
+               alt="Mohan D"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Mohan D</h3>
+          <span class="member-badge badge-head">Internal Affairs Head</span>
+          <p class="member-branch">Electronics & Communication</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 3. EDITORIAL
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">✏️</span>
+      <h2>Editorial Committee</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+         <img src="{{ url_for('static', filename='images/team/chandan_shetty_s.jpg') }}"
+     alt="Chandan Shetty S"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Chandan Shetty S</h3>
+          <span class="member-badge badge-member">Editorial Committee</span>
+          <p class="member-branch">Electronics & Communication</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 4. TECHNICAL
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">⚙️</span>
+      <h2>Technical Committee</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/purvika_jain.jpg') }}"
+               alt="Purvika Jain H N"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Purvika Jain H N</h3>
+          <span class="member-badge badge-member">Technical Committee</span>
+          <p class="member-branch">Electronics & Communication</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/yashaswini_cl.jpg') }}"
+               alt="Yashaswini C L"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Yashaswini C L</h3>
+          <span class="member-badge badge-member">Technical Committee</span>
+          <p class="member-branch">AI & Machine Learning</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/yashaswini_ds.jpg') }}"
+               alt="Yashaswini"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Yashaswini</h3>
+          <span class="member-badge badge-member">Technical Committee</span>
+          <p class="member-branch">AI & Data Science</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/dhaathri_hs.jpg') }}"
+               alt="Dhaathri H S"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Dhaathri H S</h3>
+          <span class="member-badge badge-member">Technical Committee</span>
+          <p class="member-branch">AI & Data Science</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 5. DATABASE
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">🗄️</span>
+      <h2>Database Committee</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/mohammed_tayyab.jpg') }}"
+               alt="Mohammed Tayyab"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Mohammed Tayyab</h3>
+          <span class="member-badge badge-member">Database Committee</span>
+          <p class="member-branch">Computer Science</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/rishitha_sh.jpg') }}"
+               alt="Rishitha S H"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Rishitha S H</h3>
+          <span class="member-badge badge-member">Database Committee</span>
+          <p class="member-branch">Computer Science</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/thilak_bs.jpg') }}"
+               alt="Thilak B S"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Thilak B S</h3>
+          <span class="member-badge badge-member">Database Committee</span>
+          <p class="member-branch">AI & Data Science</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/priyadarshini_rao.jpg') }}"
+               alt="Priyadarshini Rao"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Priyadarshini Rao</h3>
+          <span class="member-badge badge-member">Database Committee</span>
+          <p class="member-branch">AI & Data Science</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 6. EVENT MANAGEMENT
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">🎯</span>
+      <h2>Event Management</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/bhoomika_hs.jpg') }}"
+               alt="Bhoomika H S"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Bhoomika H S</h3>
+          <span class="member-badge badge-head">Event Management Head</span>
+          <p class="member-branch">Computer Science</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/nadia_akbar.jpg') }}"
+               alt="Nadia Akbar"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Nadia Akbar</h3>
+          <span class="member-badge badge-member">Event Management</span>
+          <p class="member-branch">CSE (AI & ML)</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/nida_saleem.jpg') }}"
+               alt="Nida Saleem"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Nida Saleem</h3>
+          <span class="member-badge badge-member">Event Management</span>
+          <p class="member-branch">CSE (AI & ML)</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/chandana_manjunath.jpg') }}"
+               alt="Chandana Manjunath"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Chandana Manjunath</h3>
+          <span class="member-badge badge-member">Event Management</span>
+          <p class="member-branch">Electronics & Communication</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+  <div class="member-photo-wrap">
+    <img src="{{ url_for('static', filename='images/team/chandan_ss_event.jpg') }}"
+         alt="Chandan S S"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div class="photo-placeholder">👤</div>
+  </div>
+  <div class="member-info">
+    <h3>Chandan S S</h3>
+          <span class="member-badge badge-member">Event Management</span>
+          <p class="member-branch">Computer Science</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS — 7. SOCIAL MEDIA
+  ══════════════════════════════════════ -->
+  <section class="team-section">
+    <div class="team-section-header committee-header">
+      <span class="team-section-icon">📱</span>
+      <h2>Social Media Committee</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo-wrap">
+          <img src="{{ url_for('static', filename='images/team/varshitha_ks.jpg') }}"
+               alt="Varshitha K S"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder">👤</div>
+        </div>
+        <div class="member-info">
+          <h3>Varshitha K S</h3>
+          <span class="member-badge badge-member">Social Media Committee</span>
+          <p class="member-branch">AI & Data Science</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Placeholder note for remaining 7 members -->
+  <div class="pending-note">
+    <span>⏳</span>
+    <p>7 more members will be added soon. Send their photos and details to update this page.</p>
   </div>
 
-</section>
+</div><!-- end .team-wrapper -->
+
 {% endblock %}

@@ -11,6 +11,12 @@
   <div class="event-cards-row">
 
     <div class="event-card big-card" onclick="location.href='/blackout'">
+      <div class="event-poster-wrap" style="height:420px;border-radius:8px;overflow:hidden;margin-bottom:1.2rem;">
+        <img src="{{ url_for('static', filename='images/blackout_poster.jpg') }}"
+             alt="Blackout Horizon 2.0"
+             style="width:100%;height:100%;object-fit:contain;background:#000;"
+             onerror="this.style.display='none'"/>
+      </div>
       <div class="event-card-icon">⚡</div>
       <h2>Blackout Horizon 2.0</h2>
       <p>
@@ -27,13 +33,26 @@
     </div>
 
     <div class="event-card big-card" onclick="location.href='/rulebook'">
+      <div class="event-poster-wrap" style="height:220px;border-radius:8px;overflow:hidden;margin-bottom:1.2rem;">
+        <img src="{{ url_for('static', filename='images/rulebook_cover.jpg') }}"
+             alt="Common Rule Book"
+             style="width:100%;height:100%;object-fit:cover;"
+             onerror="this.style.display='none'"/>
+      </div>
       <div class="event-card-icon">📋</div>
       <h2>Common Rule Book</h2>
       <p>
         All TechSpark events follow a shared set of rules to ensure fair play,
         respect, and a great experience for everyone. Read this before registering.
       </p>
-     <span class="btn-primary" style="margin-top:1.2rem;display:inline-block;">Read Rule Book →</span>
+      <ul class="event-mini-list">
+        <li>📌 Mandatory for all participants</li>
+        <li>🪪 College ID required at all times</li>
+        <li>⏰ Report 30 minutes before event</li>
+        <li>🚫 No cheating or misconduct</li>
+        <li>⚖️ Organizer decisions are final</li>
+      </ul>
+      <span class="btn-primary" style="margin-top:1.2rem;display:inline-block;">Read Rule Book →</span>
     </div>
 
   </div>

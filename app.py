@@ -7,59 +7,84 @@ app = Flask(__name__)
 EVENTS = {
     "sparkathon": {
         "name": "Sparkathon",
-        "short": "Build solutions for real-world problems in 24 hours.",
+        "short": "Join the ultimate 24-hour hackathon where innovation sparks, ideas evolve, and the future of technology is built from scratch.",
         "poster": "images/sparkathon_poster.jpg",
-        "date": "April 20, 2026",
-        "venue": "Seminar Hall, Block A – Navkis College of Engineering, Hassan",
-        "prize_pool": "10,000",
-        "theme": "AI for Social Good",
-        "fee": "200 per team",
-        "team_size": "3-5 members",
+        "date": "April 23-24, 2026",
+        "venue": "Navkis College Campus, Hassan",
+        "prize_pool": "24,000",
+        "theme": "Open Theme",
+        "fee": "400 per team",
+        "team_size": "2-4 members",
+        "time": "10:00 AM",
         "rules": [
+            "This is an inter-college event. Students from any college are welcome to participate.",
             "All team members must be enrolled students of Navkis College.",
-            "Teams must register before April 18, 2026.",
+            "Teams must register before April 23, 2026 by 6:00 AM sharp. No registrations will be accepted after this deadline.",
+            "All participants must carry their college ID cards and required equipment/laptops at the time of reporting.",
+            "Participants must report 30 minutes before the event start time (i.e., by 9:30 AM on April 23, 2026).",
+            "This is a 24-hour hackathon. Participants are expected to stay for the full duration.",
             "All code must be written during the hackathon window.",
             "Use of pre-built UI libraries is allowed; copy-pasted projects are not.",
+            "4 problem statements will be provided across 4 domains (Open Theme). Each team must select and work on exactly 1 problem statement.",
             "Teams must present a working demo at the end.",
-            "Decision of judges is final.",
+            "A participation certificate will be awarded to every participant.",
+            "Decision of judges is final and binding. No disputes will be entertained.",
+            "Food will be provided as follows: Afternoon Lunch on April 23, Night Dinner on April 23, Morning Tiffin on April 24, and 2 Refreshment breaks during the event.",
         ],
         "google_form": "https://forms.gle/huQadNmQtjD4Xb5m8"
     },
     "escape-room": {
         "name": "Escape Room",
-        "short": "Solve puzzles, crack codes, and escape before time runs out.",
+        "short": "Face unknown challenges. Trust your skills. Escape before time runs out.",
         "poster": "images/escape_poster.jpg",
         "date": "April 21, 2026",
-        "venue": "Conference Room, Block B – Navkis College of Engineering, Hassan",
+        "venue": "Navkis College Campus, Hassan",
         "prize_pool": "5,000",
-        "theme": "Puzzle & Logic",
-        "fee": "100 per team",
+        "theme": "Non-technical",
+        "fee": "200 per team",
         "team_size": "2-4 members",
+        "time": "10:00 AM",
         "rules": [
-            "No mobile phones allowed inside the room.",
-            "Each team gets exactly 30 minutes.",
-            "Hints can be requested twice per team.",
-            "Physical damage to props leads to disqualification.",
-            "Teams must wait outside until called.",
+            "This is an intercollege event. Students from any college are welcome to participate.",
+            "All participants must carry their college ID cards at the time of reporting. Entry will be denied without a valid college ID.",
+            "Registration deadline is April 21, 2026 by 7:30 AM sharp. No registrations will be accepted after this time.",
+            "Participants must report 30 minutes before the event start time (i.e., by 9:30 AM on April 21, 2026).",
+            "The event consists of 3 rounds. Teams must complete all rounds to be eligible for prizes.",
+            "No mobile phones allowed inside the escape room during any round.",
+             "A participation certificate will be awarded to every participant.",
+            "Physical damage to props or equipment will lead to immediate disqualification.",
+            "Teams must wait outside until called by the coordinators.",
+            "This is a non-technical fun activity event. No prior technical knowledge is required.",
+            "Decision of the judges is final and binding. No disputes will be entertained.",
         ],
         "google_form": "https://forms.gle/SnMUzey9pE4KMHycA"
     },
     "big-bunty-hunt": {
-        "name": "Big Bunty Hunt",
-        "short": "Race across campus following clues in this epic treasure hunt.",
+        "name": "Bug Bounty Hunt",
+        "short": "From cryptic codes to hidden flaws - decode, conquer, and claim your place among the elite bug hunters.",
         "poster": "images/bunty_poster.jpg",
         "date": "April 22, 2026",
-        "venue": "Navkis College Campus Grounds, Hassan",
-        "prize_pool": "7,000",
-        "theme": "Campus Treasure Hunt",
-        "fee": "150 per team",
-        "team_size": "3-5 members",
+        "venue": "Navkis College Campus, Hassan",
+        "prize_pool": "5,000",
+        "theme": "Technical and Fun",
+        "fee": "200 per team",
+        "team_size": "2-4 members",
+        "time": "10:00 AM",
         "rules": [
-            "Follow clues strictly in the given order.",
-            "No searching outside the marked campus zones.",
-            "Sharing clues with other teams leads to disqualification.",
-            "The first team to complete all checkpoints wins.",
-            "Coordinators decision is final in case of disputes.",
+            "This is an inter-college event. Students from any college are welcome to participate.",
+            "All participants must carry their valid college ID cards at the time of reporting. Entry will be denied without ID.",
+            "Registration deadline is April 22, 2026 by 7:30 AM sharp. No registrations will be accepted after this time.",
+            "Participants must report 30 minutes before the event start time (i.e., by 9:30 AM on April 22, 2026).",
+            "Buggy code will be provided in C and Python languages. Participants may choose to work in either language.",
+            "Small intentional errors are embedded in the code. Participants must identify, fix the errors, and submit the corrected code to earn points.",
+            "Points are awarded for each valid bug fix. The team with the highest total points at the end wins.",
+            "A fun activity round will be conducted in the middle of the event. Points are also awarded for performance in the fun activity round.",
+             "A participation certificate will be awarded to every participant.",
+            "Participants must identify and report bugs ethically. No destructive or malicious actions are allowed.",
+            "Sharing findings or solutions with other teams leads to immediate disqualification.",
+           
+            "Ragging, misbehaviour, or misconduct will lead to immediate disqualification.",
+            "Decision of judges is final and binding. No disputes will be entertained.",
         ],
         "google_form": "https://forms.gle/amCMtMJJjRsVQgUMA"
     }
@@ -68,7 +93,7 @@ EVENTS = {
 COMMON_RULES = [
     "All participants must carry their college ID cards at all times.",
     "Ragging, misbehaviour, or misconduct will lead to immediate disqualification.",
-    "Participants must report 15 minutes before their event starts.",
+    "Participants must report 30 minutes before their event starts.",
     "Mobile phones must be on silent mode during all events.",
     "Decision of the organizing committee is final and binding.",
     "No refunds will be given after registration.",
@@ -173,7 +198,7 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
     pdf.set_margins(15, 15, 15)
     pdf.set_auto_page_break(auto=True, margin=15)
 
-    # ── HEADER ──
+    # HEADER
     pdf.set_fill_color(10, 10, 30)
     pdf.rect(0, 0, 210, 45, 'F')
     pdf.set_xy(0, 8)
@@ -185,7 +210,8 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
     pdf.cell(210, 9, "Navkis College of Engineering, Hassan", align="C", new_x="LMARGIN", new_y="NEXT")
 
     pdf.set_y(52)
-    # ── POSTER IMAGE ──
+
+    # POSTER IMAGE
     if poster_path and os.path.exists(poster_path):
         img_x = 55
         img_w = 100
@@ -195,7 +221,7 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
         pdf.line(15, pdf.get_y(), 195, pdf.get_y())
         pdf.ln(8)
 
-    # ── TITLE ──
+    # TITLE
     pdf.set_text_color(0, 180, 180)
     pdf.set_font("Helvetica", "B", 20)
     pdf.cell(0, 12, clean(title), align="C", new_x="LMARGIN", new_y="NEXT")
@@ -212,7 +238,7 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
     pdf.line(15, pdf.get_y(), 195, pdf.get_y())
     pdf.ln(8)
 
-    # ── EVENT DETAILS ──
+    # EVENT DETAILS
     if details:
         pdf.set_fill_color(230, 245, 255)
         pdf.set_font("Helvetica", "B", 13)
@@ -233,15 +259,13 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
         pdf.line(15, pdf.get_y(), 195, pdf.get_y())
         pdf.ln(8)
 
-    # ── RULES ──
+    # RULES
     pdf.set_fill_color(230, 245, 255)
     pdf.set_font("Helvetica", "B", 13)
     pdf.set_text_color(0, 120, 140)
     pdf.cell(0, 9, "  Rules & Regulations", new_x="LMARGIN", new_y="NEXT", fill=True)
     pdf.ln(4)
 
-    pdf.set_font("Helvetica", "", 11)
-    pdf.set_text_color(30, 30, 30)
     for i, rule in enumerate(rules, 1):
         pdf.set_font("Helvetica", "B", 11)
         pdf.set_text_color(0, 140, 140)
@@ -251,7 +275,7 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
         pdf.multi_cell(0, 8, clean(rule), new_x="LMARGIN", new_y="NEXT")
         pdf.ln(2)
 
-    # ── FOOTER ──
+    # FOOTER
     pdf.ln(4)
     pdf.set_draw_color(0, 180, 180)
     pdf.line(15, pdf.get_y(), 195, pdf.get_y())
@@ -261,6 +285,8 @@ def generate_pdf(title, subtitle, details, rules, poster_path=None):
     pdf.cell(0, 6, "TechSpark Club - Inspire, Innovate, Integrate", align="C")
 
     return bytes(pdf.output())
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -268,6 +294,7 @@ def home():
 @app.route("/events")
 def events():
     return render_template("events.html")
+
 @app.route("/blackout")
 def blackout():
     event_list = [(k, EVENTS[k]) for k in EVENT_ORDER]
@@ -287,6 +314,7 @@ def download_event_rules(event_id):
         return "Event not found", 404
     details = {
         "Date": event["date"],
+        "Time": event.get("time", "10:00 AM"),
         "Venue": event["venue"],
         "Theme": event["theme"],
         "Prize Pool": "Rs. " + event["prize_pool"],
@@ -309,7 +337,6 @@ def download_event_rules(event_id):
         mimetype="application/pdf",
         headers={"Content-Disposition": f"attachment; filename={event_id}-rulebook.pdf"}
     )
-
 
 @app.route("/rulebook")
 def rulebook():
