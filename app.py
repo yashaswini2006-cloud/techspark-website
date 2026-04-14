@@ -18,12 +18,12 @@ EVENTS = {
         "time": "10:00 AM",
         "rules": [
             "This is an inter-college event. Students from any college are welcome to participate.",
-            "All team members must be enrolled students of Navkis College.",
-            "Teams must register before April 23, 2026 by 6:00 AM sharp. No registrations will be accepted after this deadline.",
+           
+            "Teams must register before April 23, 2026 by 6:00 AM. No registrations will be accepted after this deadline.",
             "All participants must carry their college ID cards and required equipment/laptops at the time of reporting.",
             "Participants must report 30 minutes before the event start time (i.e., by 9:30 AM on April 23, 2026).",
             "This is a 24-hour hackathon. Participants are expected to stay for the full duration.",
-            "All code must be written during the hackathon window.",
+            "All code must be Prepared during the Hackothon,Pre-prepared code is not allowed",
             "Use of pre-built UI libraries is allowed; copy-pasted projects are not.",
             "4 problem statements will be provided across 4 domains (Open Theme). Each team must select and work on exactly 1 problem statement.",
             "Teams must present a working demo at the end.",
