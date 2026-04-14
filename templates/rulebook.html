@@ -1,61 +1,120 @@
 {% extends "base.html" %}
-{% block title %}Common Rule Book – TechSpark{% endblock %}
+{% block title %}Rule Book – TechSpark{% endblock %}
 {% block content %}
 
 <section class="page-hero">
-  <h1 class="page-title">Common Rule Book</h1>
-  <p class="page-sub">Rules applicable to all TechSpark events</p>
+  <h1 class="page-title">RULE BOOK</h1>
+  <p class="page-sub">Official rules and guidelines for all TechSpark events</p>
 </section>
 
-<div class="detail-wrapper">
-  <section class="section rules-section">
+<div class="rulebook-wrapper">
 
-    <div class="rule-group">
-      <h3>1. General Conduct</h3>
-      <ol class="rules-list">
-        <li>All participants must carry a valid college ID card at all times.</li>
-        <li>Participants must respect volunteers, coordinators, and fellow contestants.</li>
-        <li>Any form of misconduct, cheating, or harassment will lead to immediate disqualification.</li>
-        <li>Decision of the organizing committee and judges is final and binding.</li>
+  <!-- ══════════════════════════════════════
+       ESCAPE ROOM
+  ══════════════════════════════════════ -->
+  <section class="rulebook-event-section">
+    <div class="rulebook-poster-wrap">
+      <img src="{{ url_for('static', filename='images/escape_poster.jpg') }}"
+           alt="Escape Room Poster"
+           class="rulebook-poster"/>
+    </div>
+    <h2 class="rulebook-event-title">Escape Room</h2>
+    <p class="rulebook-event-date">📅 April 21, 2026</p>
+    <div class="rulebook-rules">
+      <h3>Rules & Regulations</h3>
+      <ol>
+        <li>This is an intercollege event. Students from any college are welcome to participate.</li>
+        <li>All participants must carry their college ID cards at the time of reporting.</li>
+        <li>Registration deadline is April 21, 2026 by 7:30 AM sharp.</li>
+        <li>Participants must report 30 minutes before the event start time (by 9:30 AM).</li>
+        <li>The event consists of 3 rounds. Teams must complete all rounds to be eligible for prizes.</li>
+        <li>No mobile phones allowed inside the escape room during any round.</li>
+        <li>A participation certificate will be awarded to every participant.</li>
+        <li>Physical damage to props or equipment will lead to immediate disqualification.</li>
+        <li>Teams must wait outside until called by the coordinators.</li>
+        <li>Decision of the judges is final and binding. No disputes will be entertained.</li>
       </ol>
     </div>
-
-    <div class="rule-group">
-      <h3>2. Registration</h3>
-      <ol class="rules-list">
-        <li>All team members must register via the official Google Form for their respective event.</li>
-        <li>Registration is considered confirmed only after successful payment (where applicable).</li>
-        <li>No changes to team composition are allowed after the registration deadline.</li>
-      </ol>
+    <div class="rulebook-loading">
+      <span class="loading-dot">⏳</span> More details coming soon...
     </div>
-
-    <div class="rule-group">
-      <h3>3. Punctuality</h3>
-      <ol class="rules-list">
-        <li>Teams must report at the venue 15 minutes before the scheduled start time.</li>
-        <li>Late arrivals may be denied entry without a refund.</li>
-      </ol>
-    </div>
-
-    <div class="rule-group">
-      <h3>4. Prizes & Certificates</h3>
-      <ol class="rules-list">
-        <li>Prize money will be awarded to the top-placing teams as per each event's guidelines.</li>
-        <li>Participation certificates will be issued to all registered participants who attend.</li>
-        <li>Prize distribution will happen on the final day of Blackout Horizon 2.0.</li>
-      </ol>
-    </div>
-
-    <div class="rule-group">
-      <h3>5. Code of Ethics</h3>
-      <ol class="rules-list">
-        <li>Plagiarism of any kind is strictly prohibited.</li>
-        <li>Participants must not tamper with equipment, props, or event materials.</li>
-        <li>Any technical issues must be reported immediately to the nearest coordinator.</li>
-      </ol>
-    </div>
-
+    <a href="/events/escape-room/download" class="btn-primary rulebook-download-btn">
+      📥 Download Escape Room Rulebook
+    </a>
   </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       BUG BOUNTY HUNT
+  ══════════════════════════════════════ -->
+  <section class="rulebook-event-section">
+    <div class="rulebook-poster-wrap">
+      <img src="{{ url_for('static', filename='images/bunty_poster.jpg') }}"
+           alt="Bug Bounty Hunt Poster"
+           class="rulebook-poster"/>
+    </div>
+    <h2 class="rulebook-event-title">Bug Bounty Hunt</h2>
+    <p class="rulebook-event-date">📅 April 22, 2026</p>
+    <div class="rulebook-rules">
+      <h3>Rules & Regulations</h3>
+      <ol>
+        <li>This is an inter-college event. Students from any college are welcome to participate.</li>
+        <li>All participants must carry their valid college ID cards at the time of reporting.</li>
+        <li>Registration deadline is April 22, 2026 by 7:30 AM sharp.</li>
+        <li>Participants must report 30 minutes before the event start time (by 9:30 AM).</li>
+        <li>Buggy code will be provided in C and Python languages.</li>
+        <li>Participants must identify, fix the errors, and submit the corrected code to earn points.</li>
+        <li>A fun activity round will be conducted in the middle of the event.</li>
+        <li>A participation certificate will be awarded to every participant.</li>
+        <li>Sharing findings or solutions with other teams leads to immediate disqualification.</li>
+        <li>Decision of judges is final and binding. No disputes will be entertained.</li>
+      </ol>
+    </div>
+    <div class="rulebook-loading">
+      <span class="loading-dot">⏳</span> More details coming soon...
+    </div>
+    <a href="/events/big-bunty-hunt/download" class="btn-primary rulebook-download-btn">
+      📥 Download Bug Bounty Rulebook
+    </a>
+  </section>
+
+  <div class="team-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       SPARKATHON
+  ══════════════════════════════════════ -->
+  <section class="rulebook-event-section">
+    <div class="rulebook-poster-wrap">
+      <img src="{{ url_for('static', filename='images/sparkathon_poster.jpg') }}"
+           alt="Sparkathon Poster"
+           class="rulebook-poster"/>
+    </div>
+    <h2 class="rulebook-event-title">Sparkathon</h2>
+    <p class="rulebook-event-date">📅 April 23–24, 2026</p>
+    <div class="rulebook-rules">
+      <h3>Rules & Regulations</h3>
+      <ol>
+        <li>This is an inter-college event. Students from any college are welcome to participate.</li>
+        <li>Teams must register before April 23, 2026 by 6:00 AM sharp.</li>
+        <li>All participants must carry their college ID cards and laptops at the time of reporting.</li>
+        <li>Participants must report 30 minutes before the event start time (by 9:30 AM).</li>
+        <li>This is a 24-hour hackathon. Participants are expected to stay for the full duration.</li>
+        <li>All code must be written during the hackathon window.</li>
+        <li>Use of pre-built UI libraries is allowed; copy-pasted projects are not.</li>
+        <li>Teams must present a working demo at the end.</li>
+        <li>A participation certificate will be awarded to every participant.</li>
+        <li>Decision of judges is final and binding. No disputes will be entertained.</li>
+      </ol>
+    </div>
+    <div class="rulebook-loading">
+      <span class="loading-dot">⏳</span> More details coming soon...
+    </div>
+    <a href="/events/sparkathon/download" class="btn-primary rulebook-download-btn">
+      📥 Download Sparkathon Rulebook
+    </a>
+  </section>
+
 </div>
 
 {% endblock %}

@@ -42,7 +42,7 @@ EVENTS = {
         "prize_pool": "5,000",
         "theme": "Non-technical",
         "fee": "200 per team",
-        "team_size": "2-4 members",
+        "team_size": "3-4 members",
         "time": "10:00 AM",
         "rules": [
             "This is an intercollege event. Students from any college are welcome to participate.",
@@ -50,7 +50,7 @@ EVENTS = {
             "Registration deadline is April 21, 2026 by 7:30 AM sharp. No registrations will be accepted after this time.",
             "Participants must report 30 minutes before the event start time (i.e., by 9:30 AM on April 21, 2026).",
             "The event consists of 3 rounds. Teams must complete all rounds to be eligible for prizes.",
-            "No mobile phones allowed inside the escape room during any round.",
+            "Mobile Phones are not allowed in any of the rounds in the event.",
              "A participation certificate will be awarded to every participant.",
             "Physical damage to props or equipment will lead to immediate disqualification.",
             "Teams must wait outside until called by the coordinators.",
@@ -342,19 +342,7 @@ def download_event_rules(event_id):
 def rulebook():
     return render_template("rulebook.html", common_rules=COMMON_RULES)
 
-@app.route("/rulebook/download")
-def download_rulebook():
-    pdf_bytes = generate_pdf(
-        title="TechSpark - Common Rule Book",
-        subtitle="Rules applicable to all events",
-        details=None,
-        rules=COMMON_RULES
-    )
-    return Response(
-        pdf_bytes,
-        mimetype="application/pdf",
-        headers={"Content-Disposition": "attachment; filename=techspark-common-rulebook.pdf"}
-    )
+
 
 @app.route("/contact")
 def contact():
