@@ -68,7 +68,7 @@ EVENTS = {
         "prize_pool": "5,000",
         "theme": "Technical and Fun",
         "fee": "200 per team",
-        "team_size": "2-4 members",
+        "team_size": "1-4 members",
         "time": "10:00 AM",
         "rules": [
             "This is an inter-college event. Students from any college are welcome to participate.",
