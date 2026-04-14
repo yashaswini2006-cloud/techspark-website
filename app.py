@@ -101,7 +101,7 @@ COMMON_RULES = [
     "Any form of cheating will lead to disqualification of the entire team.",
 ]
 
-EVENT_ORDER = ["sparkathon", "escape-room", "big-bunty-hunt"]
+EVENT_ORDER = ["escape-room", "big-bunty-hunt", "sparkathon"]
 
 TEACHER_COORDINATORS = [
     {
